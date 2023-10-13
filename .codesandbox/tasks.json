@@ -1,0 +1,16 @@
+{
+    "$schema": "https://codesandbox.io/schemas/tasks.json",
+    "setupTasks": [],
+    "tasks": {
+        "prepare": {
+            "name": "prepare",
+            "command": "echo -e \"shamefully-hoist=true\\n@fortawesome:registry=https://npm.fontawesome.com/\\n//npm.fontawesome.com/:_authToken=$FONTAWESOME_AUTH_TOKEN\" > .npmrc",
+            "runOn": "setup"
+        },
+        "install": {
+            "name": "install",
+            "command": "pnpm i",
+            "runOn": "setup"
+        }
+    }
+}
